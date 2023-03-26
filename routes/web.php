@@ -19,3 +19,8 @@ Route::get('/',[HomeController::class,'index']);
 Route::get('/about',[AboutController::class,'index']);
 Route::get('/contact',[ContactController::class,'index']);
 Route::get('/services',[ServicesController::class,'index']);
+
+Route::get('/upload',function(){
+return view('upload');
+});
+Route::post('/upload',[ContactController::class,'upload']);
